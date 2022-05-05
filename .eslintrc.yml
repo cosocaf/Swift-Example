@@ -37,9 +37,7 @@ rules:
     - multiline:
         delimiter: semi
         requireLast: true
-    - singleline:
-        delimiter: semi
-        requireLast: true
   "@typescript-eslint/semi":
     - error
     - always
+  "@typescript-eslint/no-non-null-assertion": off

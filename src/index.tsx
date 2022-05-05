@@ -5,7 +5,7 @@ import { NotFound } from "./not_found";
 import { Overview } from "./overview";
 import * as Part1 from "./part1";
 
-import "./sass/style.scss"
+import "./sass/style.scss";
 
 const App = () => {
   return (
@@ -38,7 +38,7 @@ const App = () => {
 };
 
 const container = document.getElementById("app");
-if(container != null) {
+if (container != null) {
   const root = createRoot(container);
   root.render(<App />);
 }

@@ -15,5 +15,5 @@ export const useScrollHistory = () => {
 
     const { x, y } = scrollHistory.get(location.hash)!;
     window.scrollTo(x, y);
-  }, []);
+  }, [location.hash]);
 };

@@ -43,7 +43,7 @@ export const Chapter1 = () => {
       </p>
       <h2>プログラムを実行してみる</h2>
       <p>
-        main.swiftをクリックすると<code>print("Hello, World!")</code>
+        main.swiftをクリックすると<code>print(&quot;Hello, World!&quot;)</code>
         と書かれた画面が出てくると思います。 これこそがSwiftのソースコードです。
       </p>
       <p>

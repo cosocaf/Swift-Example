@@ -12,7 +12,7 @@ export const CodeFrame = ({ code }: CodeFrameProps) => {
     let minIndent = Infinity;
     for (const line of lines) {
       const indent = line.search(/\S/g);
-      if (indent != -1) {
+      if (indent !== -1) {
         minIndent = Math.min(minIndent, indent);
       }
     }
@@ -21,7 +21,7 @@ export const CodeFrame = ({ code }: CodeFrameProps) => {
     return lines
       .map((line) => line.slice(minIndent))
       .filter((value) => {
-        if (value == "" && !begin) {
+        if (value === "" && !begin) {
           return false;
         } else {
           begin = true;
@@ -32,7 +32,7 @@ export const CodeFrame = ({ code }: CodeFrameProps) => {
   }, [code]);
   const [buttonMessage, setButtonMessage] = useState("copy");
   const onClick = useCallback(() => {
-    navigator.clipboard.writeText(memo).then(() => {
+    void navigator.clipboard.writeText(memo).then(() => {
       setButtonMessage("Copied!");
       setTimeout(() => setButtonMessage("Copy"), 1000);
     });

@@ -15,7 +15,7 @@ export const Breadcrumbs = ({ breadcrumbs }: BreadcrumbsProps) => {
     <ol className={styles.breadcrumbs}>
       {breadcrumbs.map(
         function (this: { path: string }, breadcrumb, index) {
-          if (index != 0) this.path += "/";
+          if (index !== 0) this.path += "/";
           this.path += breadcrumb.file ?? "";
           return (
             <li key={this.path}>
