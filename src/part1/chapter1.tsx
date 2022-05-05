@@ -58,8 +58,8 @@ export const Chapter1 = () => {
         <figcaption>成功例</figcaption>
       </figure>
       <NextPrev
-        prev={{ link: "part1", title: "第一部 Swift入門" }}
-        next={{ link: "part1/chapter2", title: "第二章 プログラムの基本構造" }}
+        prev={{ link: "/part1", title: "第一部 Swift入門" }}
+        next={{ link: "/part1/chapter2", title: "第二章 プログラムの基本構造" }}
       />
     </main>
   );

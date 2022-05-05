@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { PublicBasedLink } from "./public_based_link";
+import { Link } from "react-router-dom";
 
 import styles from "../sass/component/breadcrumbs.scss";
 
@@ -13,8 +13,8 @@ type BreadcrumbsProps = {
 export const Breadcrumbs = ({ breadcrumbs }: BreadcrumbsProps) => {
   const paths = useMemo(() => {
     let path = "";
-    return breadcrumbs.map((breadcrumb) => {
-      if (path !== "") path += "/";
+    return breadcrumbs.map((breadcrumb, index) => {
+      if (index !== 0) path += "/";
       path += breadcrumb.file ?? "";
       return { file: path, displayName: breadcrumb.displayName };
     });
@@ -24,9 +24,9 @@ export const Breadcrumbs = ({ breadcrumbs }: BreadcrumbsProps) => {
       {paths.map((breadcrumb) => {
         return (
           <li key={breadcrumb.file}>
-            <PublicBasedLink to={breadcrumb.file}>
+            <Link to={breadcrumb.file === "" ? "/" : breadcrumb.file}>
               {breadcrumb.displayName}
-            </PublicBasedLink>
+            </Link>
           </li>
         );
       })}

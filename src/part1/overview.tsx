@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Breadcrumbs } from "../component/breadcrumbs";
-import { PublicBasedLink } from "../component/public_based_link";
 import { useScrollHistory } from "../hooks/use_scroll_history";
 import { useTitle } from "../hooks/use_title";
 
@@ -26,69 +27,61 @@ export const Overview = () => {
       </p>
       <ul>
         <li>
-          第一章 <PublicBasedLink to="part1/chapter1">環境構築</PublicBasedLink>
+          第一章 <Link to="/part1/chapter1">環境構築</Link>
         </li>
         <li>
           第二章
-          <PublicBasedLink to="part1/chapter2">
-            プログラムの基本構造
-          </PublicBasedLink>
+          <Link to="/part1/chapter2">プログラムの基本構造</Link>
         </li>
         <li>
           第三章
-          <PublicBasedLink to="part1/chapter3">式と演算子</PublicBasedLink>
+          <Link to="/part1/chapter3">式と演算子</Link>
         </li>
         <li>
-          第四章 <PublicBasedLink to="part1/chapter4">条件分岐</PublicBasedLink>
+          第四章 <Link to="/part1/chapter4">条件分岐</Link>
         </li>
         <li>
-          第五章 <PublicBasedLink to="part1/chapter5">繰り返し</PublicBasedLink>
+          第五章 <Link to="/part1/chapter5">繰り返し</Link>
         </li>
         <li>
-          第六章 <PublicBasedLink to="part1/chapter6">配列</PublicBasedLink>
+          第六章 <Link to="/part1/chapter6">配列</Link>
         </li>
         <li>
-          第七章 <PublicBasedLink to="part1/chapter7">構造体</PublicBasedLink>
+          第七章 <Link to="/part1/chapter7">構造体</Link>
         </li>
         <li>
-          第八章 <PublicBasedLink to="part1/chapter8">関数</PublicBasedLink>
+          第八章 <Link to="/part1/chapter8">関数</Link>
         </li>
         <li>
           第九章
-          <PublicBasedLink to="part1/chapter9">
-            オブジェクト指向の導入
-          </PublicBasedLink>
+          <Link to="/part1/chapter9">オブジェクト指向の導入</Link>
         </li>
         <li>
           第十章
-          <PublicBasedLink to="part1/chapter10">
-            クラスとインスタンス
-          </PublicBasedLink>
+          <Link to="/part1/chapter10">クラスとインスタンス</Link>
         </li>
         <li>
           第十一章
-          <PublicBasedLink to="part1/chapter11">メソッド</PublicBasedLink>
+          <Link to="/part1/chapter11">メソッド</Link>
         </li>
         <li>
           第十二章
-          <PublicBasedLink to="part1/chapter12">カプセル化</PublicBasedLink>
+          <Link to="/part1/chapter12">カプセル化</Link>
         </li>
         <li>
-          第十三章 <PublicBasedLink to="part1/chapter13">継承</PublicBasedLink>
+          第十三章 <Link to="/part1/chapter13">継承</Link>
         </li>
         <li>
           第十四章
-          <PublicBasedLink to="part1/chapter14">プロトコル</PublicBasedLink>
+          <Link to="/part1/chapter14">プロトコル</Link>
         </li>
         <li>
           第十五章
-          <PublicBasedLink to="part1/chapter15">
-            エラーハンドリング
-          </PublicBasedLink>
+          <Link to="/part1/chapter15">エラーハンドリング</Link>
         </li>
         <li>
           第十六章
-          <PublicBasedLink to="part1/chapter16">標準ライブラリ</PublicBasedLink>
+          <Link to="/part1/chapter16">標準ライブラリ</Link>
         </li>
       </ul>
     </main>

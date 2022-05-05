@@ -282,8 +282,8 @@ export const Chapter2 = () => {
       </p>
 
       <NextPrev
-        prev={{ link: "part1/chapter1", title: "第一章 環境構築" }}
-        next={{ link: "part1/chapter3", title: "第三章 式と演算子" }}
+        prev={{ link: "/part1/chapter1", title: "第一章 環境構築" }}
+        next={{ link: "/part1/chapter3", title: "第三章 式と演算子" }}
       />
     </main>
   );
