@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
 import { NextPrev } from "../component/next_prev";
@@ -19,7 +20,7 @@ export const Chapter2 = () => {
         ]}
       />
       <p>
-        <a href="/part1/chapter1">前章</a>では、画面に「Hello,
+        <Link to="/part1/chapter1">前章</Link>では、画面に「Hello,
         World!」と表示されるプログラムを実行してみました。
       </p>
       <CodeFrame
@@ -110,7 +111,7 @@ export const Chapter2 = () => {
       />
       <p>
         ほんの一例ですが、以下のような演算子があります。詳しくは
-        <a href="/part1/chapter3">第三章</a>で説明します。
+        <Link to="/part1/chapter3">第三章</Link>で説明します。
       </p>
       <ul>
         <li>足し算: +演算子</li>
