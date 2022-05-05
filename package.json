@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "cross-env PUBLIC_URL=/ webpack serve --config ./webpack/webpack.dev.js",
-    "build": "cross-env PUBLIC_URL=https://github.com/cosocaf/Swift-Example webpack --config ./webpack/webpack.prod.js"
+    "build": "cross-env PUBLIC_URL=https://github.com/cosocaf/Swift-Example/docs webpack --config ./webpack/webpack.prod.js"
   },
   "repository": {
     "type": "git",
