@@ -8,7 +8,6 @@ import * as Part1 from "./part1";
 import "./sass/style.scss"
 
 const App = () => {
-  console.log(process.env.PUBLIC_URL);
   return (
     <React.StrictMode>
       <BrowserRouter basename={process.env.PUBLIC_URL}>

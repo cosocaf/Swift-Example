@@ -1,12 +1,24 @@
 import React from "react";
 
 import img1 from "../../assets/part1-chapter1-img1.png";
+import { Breadcrumbs } from "../component/breadcrumbs";
 import { NextPrev } from "../component/next_prev";
+import { useScrollHistory } from "../hooks/use_scroll_history";
+import { useTitle } from "../hooks/use_title";
 
 export const Chapter1 = () => {
+  useTitle("第一章 環境構築");
+  useScrollHistory();
   return (
     <main>
       <h1>第一章 環境構築</h1>
+      <Breadcrumbs
+        breadcrumbs={[
+          { displayName: "ホーム" },
+          { file: "part1", displayName: "第一部" },
+          { file: "chapter1", displayName: "第一章" },
+        ]}
+      />
       <p>第一章ではSwiftで開発をするための環境構築について説明します。</p>
       <h2>App Storeからインストール</h2>
       <ul>
@@ -46,8 +58,8 @@ export const Chapter1 = () => {
         <figcaption>成功例</figcaption>
       </figure>
       <NextPrev
-        prev={{ link: "/part1", title: "第一部 Swift入門" }}
-        next={{ link: "/part1/chapter2", title: "第二章 プログラムの基本構造" }}
+        prev={{ link: "part1", title: "第一部 Swift入門" }}
+        next={{ link: "part1/chapter2", title: "第二章 プログラムの基本構造" }}
       />
     </main>
   );

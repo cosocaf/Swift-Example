@@ -1,6 +1,7 @@
 import React from "react";
 
 import styles from "../sass/component/next_prev.scss";
+import { PublicBasedLink } from "./public_based_link";
 
 type NextPrevProps = {
   prev?: {
@@ -16,16 +17,16 @@ export const NextPrev = ({ prev, next }: NextPrevProps) => {
   return (
     <div className={styles.nextPrev}>
       {prev ? (
-        <a className={styles.prev} href={prev.link}>
+        <PublicBasedLink className={styles.prev} to={prev.link}>
           <span className={styles.label}>前の章</span>
           {prev.title}
-        </a>
+        </PublicBasedLink>
       ) : null}
       {next ? (
-        <a className={styles.next} href={next.link}>
+        <PublicBasedLink className={styles.next} to={next.link}>
           <span className={styles.label}>次の章</span>
           {next.title}
-        </a>
+        </PublicBasedLink>
       ) : null}
     </div>
   );

@@ -1,11 +1,23 @@
 import React from "react";
+import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
 import { NextPrev } from "../component/next_prev";
+import { useScrollHistory } from "../hooks/use_scroll_history";
+import { useTitle } from "../hooks/use_title";
 
 export const Chapter2 = () => {
+  useTitle("第二章 プログラムの基本構造");
+  useScrollHistory();
   return (
     <main>
       <h1>第二章 プログラムの基本構造</h1>
+      <Breadcrumbs
+        breadcrumbs={[
+          { displayName: "ホーム" },
+          { file: "part1", displayName: "第一部" },
+          { file: "chapter2", displayName: "第二章" },
+        ]}
+      />
       <p>
         <a href="/part1/chapter1">前章</a>では、画面に「Hello,
         World!」と表示されるプログラムを実行してみました。
@@ -268,8 +280,8 @@ export const Chapter2 = () => {
       </p>
 
       <NextPrev
-        prev={{ link: "/part1/chapter1", title: "第一章 環境構築" }}
-        next={{ link: "/part1/chapter3", title: "第三章 式と演算子" }}
+        prev={{ link: "part1/chapter1", title: "第一章 環境構築" }}
+        next={{ link: "part1/chapter3", title: "第三章 式と演算子" }}
       />
     </main>
   );
