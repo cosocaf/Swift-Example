@@ -10,7 +10,7 @@ import "./sass/style.scss"
 const App = () => {
   return (
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route index element={<Overview />} />
           <Route path="/part1" element={<Part1.Overview />} />

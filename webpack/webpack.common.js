@@ -1,6 +1,7 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const DefinePlugin = require("webpack").DefinePlugin;
 
 module.exports = {
   entry: path.join(__dirname, "..", "src", "index.tsx"),
@@ -49,11 +50,14 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx"],
   },
   plugins: [
+    new DefinePlugin({
+      "process.env.PUBLIC_URL": JSON.stringify(process.env.PUBLIC_URL),
+    }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "..", "src", "index.html")
+      template: path.join(__dirname, "..", "src", "index.html"),
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
-    })
+    }),
   ],
 };
