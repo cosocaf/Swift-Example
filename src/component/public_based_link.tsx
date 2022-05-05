@@ -12,7 +12,7 @@ export const PublicBasedLink = ({
   to,
 }: PublicBasedLinkProps) => {
   return (
-    <Link to={to} className={className}>
+    <Link to={`${process.env.PUBLIC_URL ?? ""}${to}`} className={className}>
       {children}
     </Link>
   );

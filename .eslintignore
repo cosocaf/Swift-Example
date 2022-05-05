@@ -1,3 +1,4 @@
 webpack/
 docs/
 node_modules/
+*.d.ts
