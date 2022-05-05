@@ -12,16 +12,7 @@ export const PublicBasedLink = ({
   to,
 }: PublicBasedLinkProps) => {
   return (
-    <Link
-      to={
-        process.env.PUBLIC_URL +
-        to
-          .split("/")
-          .filter((path) => path)
-          .join("/")
-      }
-      className={className}
-    >
+    <Link to={to} className={className}>
       {children}
     </Link>
   );
