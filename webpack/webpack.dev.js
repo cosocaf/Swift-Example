@@ -10,12 +10,14 @@ module.exports = merge.merge(common, {
     static: path.join(__dirname, "..", "docs"),
     compress: true,
     port: 9000,
-    historyApiFallback: true,
+    historyApiFallback: {
+      rewrites: [{ from: /^\/*/, to: "/index.html" }],
+    },
     open: true,
     hot: true,
     client: {
       overlay: true,
       progress: true,
     },
-  }
+  },
 });

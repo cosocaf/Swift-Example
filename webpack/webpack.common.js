@@ -6,8 +6,8 @@ module.exports = {
   entry: path.join(__dirname, "..", "src", "index.tsx"),
   output: {
     path: path.join(__dirname, "..", "docs"),
+    publicPath: process.env.PUBLIC_URL,
     filename: "[name].js",
-    assetModuleFilename: "../assets/[name][ext]",
   },
   cache: true,
   target: "web",
