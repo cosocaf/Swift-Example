@@ -234,6 +234,38 @@ export const Chapter2 = () => {
           let 年齢 = 30
         `}
       />
+      <p>
+        また、変数名の大文字・小文字は区別されます。
+        例えば、次のコードはエラーとなり実行できません。
+      </p>
+      <CodeFrame
+        code={`
+        let name = "Tom"
+        print(Name)
+      `}
+      />
+      <h2>変数の命名規則</h2>
+      <p>
+        守らなくてもエラーにはなりませんが、コードの可読性を高めるために以下のルールに則った変数名をつけることが推奨されます。
+      </p>
+      <ul>
+        <li>半角英数字、アンダーバー、ドルマークのみを使用する</li>
+        <li>小文字で始める</li>
+        <li>
+          複数単語で構成する場合は二つ目以降の単語の頭文字を大文字にしてつなげる
+        </li>
+        <li>
+          次章以降で解説する特別な例外を除き、１文字のみの名前や、省略形にした名前は避ける
+        </li>
+      </ul>
+      <CodeFrame code={`
+        let name = "Tom"                      // OK
+        let mailAddress = "xxx@xxx.xxx"       // OK
+        let Age = 20                          // NG: 先頭の文字は小文字にする → age
+        let telephonenumber = "000-000-0000"  // NG: 単語の区切りは大文字にする → telephoneNumber
+        let a = "hello"                       // NG: １文字のみでは何を表す変数なのかがわからない
+        let cnt = 0                           // NG: 省略形にしない → count
+      `} />
       <h2>変数の使い方</h2>
       <p>
         Swiftでは、文字列を意味する&quot;hello&quot;や数字を意味する100とおなじように変数を使用できます。
