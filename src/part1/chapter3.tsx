@@ -25,17 +25,6 @@ export const Chapter3 = () => {
         <Link to="/part1/chapter2">前章</Link>
         では、変数を使って単純な文章を表示できるようになりました。
       </p>
-      <CodeFrame
-        code={`
-          let hero = "勇者あ"
-          let devil = "魔王サタン"
-
-          print(devil + "によって世界は滅びようとしていた...")
-          print(hero + "は果敢に" + devil + "に挑んだが、レベルが足りなかった...!")
-          print(hero + "は死んでしまった...")
-          print("GAME OVER")
-        `}
-      />
       <p>今回は式と演算子について学びます。</p>
       <h2>データ型</h2>
       <p>式を構成する最小単位を「値」といいます。</p>
