@@ -2,6 +2,7 @@ import React from "react";
 
 import img1 from "../../assets/part1-chapter1-img1.png";
 import { Breadcrumbs } from "../component/breadcrumbs";
+import { LastUpdate } from "../component/last_update";
 import { NextPrev } from "../component/next_prev";
 import { useScrollHistory } from "../hooks/use_scroll_history";
 import { useTitle } from "../hooks/use_title";
@@ -19,6 +20,7 @@ export const Chapter1 = () => {
           { file: "chapter1", displayName: "第一章" },
         ]}
       />
+      <LastUpdate date="2022/05/05" />
       <p>第一章ではSwiftで開発をするための環境構築について説明します。</p>
       <h2>App Storeからインストール</h2>
       <ul>

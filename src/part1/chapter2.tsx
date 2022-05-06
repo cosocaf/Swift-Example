@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
+import { LastUpdate } from "../component/last_update";
 import { NextPrev } from "../component/next_prev";
 import { useScrollHistory } from "../hooks/use_scroll_history";
 import { useTitle } from "../hooks/use_title";
@@ -19,6 +20,7 @@ export const Chapter2 = () => {
           { file: "chapter2", displayName: "第二章" },
         ]}
       />
+      <LastUpdate date="2022/05/07" />
       <p>
         <Link to="/part1/chapter1">前章</Link>では、画面に「Hello,
         World!」と表示されるプログラムを実行してみました。
@@ -114,11 +116,11 @@ export const Chapter2 = () => {
         <Link to="/part1/chapter3">第三章</Link>で説明します。
       </p>
       <ul>
-        <li>足し算: +演算子</li>
-        <li>引き算: -演算子</li>
-        <li>掛け算: *演算子</li>
-        <li>割り算: /演算子</li>
-        <li>余り: %演算子</li>
+        <li>加算: +演算子</li>
+        <li>減算: -演算子</li>
+        <li>乗算: *演算子</li>
+        <li>除算: /演算子</li>
+        <li>剰余: %演算子</li>
       </ul>
       <h2>文字列を+演算子でくっつけよう</h2>
       <p>+演算子は加算だけではなく文字列同士をくっつけることもできます。</p>
@@ -258,14 +260,16 @@ export const Chapter2 = () => {
           次章以降で解説する特別な例外を除き、１文字のみの名前や、省略形にした名前は避ける
         </li>
       </ul>
-      <CodeFrame code={`
+      <CodeFrame
+        code={`
         let name = "Tom"                      // OK
         let mailAddress = "xxx@xxx.xxx"       // OK
         let Age = 20                          // NG: 先頭の文字は小文字にする → age
         let telephonenumber = "000-000-0000"  // NG: 単語の区切りは大文字にする → telephoneNumber
         let a = "hello"                       // NG: １文字のみでは何を表す変数なのかがわからない
-        let cnt = 0                           // NG: 省略形にしない → count
-      `} />
+        let msg = "hello"                     // NG: 省略形にしない → message
+      `}
+      />
       <h2>変数の使い方</h2>
       <p>
         Swiftでは、文字列を意味する&quot;hello&quot;や数字を意味する100とおなじように変数を使用できます。
@@ -283,36 +287,39 @@ export const Chapter2 = () => {
           春はあけぼの
         `}
       />
-      <h2>ちょっとしたノベルゲーム</h2>
+      <h2>入力を受け取る</h2>
       <p>
-        さて、これまでの知識を応用して、ちょっとしたノベルゲームを作ってみましょう！
-        題材は好きなように選んでいいです。
+        print()を使うことで画面に文字列を出力できましたが、逆に画面から文字列を入力するにはどうしたらよいでしょうか。
       </p>
-      <p>本稿では勇者が魔王と戦うシーンを作ってみます。</p>
       <CodeFrame
         code={`
-          let hero = "勇者あ"
-          let devil = "魔王サタン"
+        let input = readLine()!
+        print("あなたは" + input + "と入力しました。")
+      `}
+      />
+      <p>
+        readLine()!とすることでキーボードから入力された一行を読み込むことができます。Lが大文字であることと「!」がつくことに注意してください。
+      </p>
+      <h2>練習問題：ちょっとしたノベルゲーム</h2>
+      <p>
+        さて、これまでの知識を応用して、ちょっとしたノベルゲームを作ってみましょう！以下の内容のプログラムを作成してください。
+      </p>
+      <ol>
+        <li>画面に「魔王が世界を滅ぼそうとしている...」と表示する</li>
+        <li>画面に「主人公の名前を入力してください」と表示する</li>
+        <li>キーボードから一行入力を受け取り、変数nameに代入する</li>
+        <li>画面に「勇者(主人公の名前)は冒険の旅に出た!」と表示する</li>
+      </ol>
 
-          print(devil + "によって世界は滅びようとしていた...")
-          print(hero + "は果敢に" + devil + "に挑んだが、レベルが足りなかった...!")
-          print(hero + "は死んでしまった...")
-          print("GAME OVER")
-        `}
-      />
+      <p>できましたか？それでは解答例です。</p>
       <CodeFrame
         code={`
-          出力結果：
-          魔王サタンによって世界は滅びようとしていた...
-          勇者あは果敢に魔王サタンに挑んだが、レベルが足りなかった...!
-          勇者あは死んでしまった...
-          GAME OVER
+          print("魔王が世界を滅ぼそうとしている...")
+          print("主人公の名前を入力してください")
+          let name = readLine()!
+          print("勇者" + name + "は冒険の旅に出た!")
         `}
       />
-      <p>
-        勇者はレベルが足りずに負けてしまいました。
-        次の章では式と演算子について学び、勇者のレベルをあげられるようにします。
-      </p>
 
       <NextPrev
         prev={{ link: "/part1/chapter1", title: "第一章 環境構築" }}
