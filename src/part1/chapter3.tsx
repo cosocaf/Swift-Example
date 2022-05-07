@@ -223,7 +223,7 @@ export const Chapter3 = () => {
         <li>message</li>
       </ul>
       <p>
-        これらはすべて「式」です。100、&quot;hello&quot;などのリテラルやmessageなどの変数、100
+        これらはすべて「式」です。100、&quot;hello&quot;、trueなどのリテラルやmessageなどの変数、100
         + 200などの式と演算子を組み合わせたものも式です。
       </p>
       <p>
