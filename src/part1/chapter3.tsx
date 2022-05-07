@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Accordion } from "../component/accordion";
 import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
 import { LastUpdate } from "../component/last_update";
@@ -459,8 +460,9 @@ export const Chapter3 = () => {
         <li>画面に「特訓の結果、(level)レベルに成長した！」と表示する</li>
       </ol>
       <p>できましたか？それでは解答例です。</p>
-      <CodeFrame
-        code={`
+      <Accordion showMessage="解答を表示する" hideMessage="解答を隠す">
+        <CodeFrame
+          code={`
           var level = 1
           print("勇者のレベルは" + String(level) + "だ。")
           print("勇者は特訓を始めた！")
@@ -469,7 +471,8 @@ export const Chapter3 = () => {
           level += exp
           print("特訓の結果、" + String(level) + "レベルに成長した！")
         `}
-      />
+        />
+      </Accordion>
       <p>どうでしょうか？次章の練習問題ではいよいよ魔王に挑んでみます。</p>
       <NextPrev
         prev={{ link: "/part1/chapter2", title: "第二章 プログラムの基本構造" }}

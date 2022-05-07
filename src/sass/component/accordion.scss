@@ -1,0 +1,47 @@
+.accordion {
+  & > .toggleButton {
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    border: solid 1px var(--icon-color);
+    &:hover {
+      background: var(--hover-main-bg-color);
+    }
+    &::before,
+    &::after {
+      content: "";
+      width: 1rem;
+      height: 0.2rem;
+      background: var(--icon-color);
+      position: absolute;
+      top: calc(50% - 0.2rem);
+      right: 12px;
+      left: auto;
+      transition: 0.4s ease;
+    }
+  }
+  &[data-show="true"] {
+    & > .toggleButton {
+      &::before {
+      }
+      &::after {
+      }
+    }
+    & > .content {
+      display: block;
+    }
+  }
+  &[data-show="false"] {
+    & > .toggleButton {
+      &::before {
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    & > .content {
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Accordion } from "../component/accordion";
 import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
 import { LastUpdate } from "../component/last_update";
@@ -319,14 +320,16 @@ export const Chapter2 = () => {
       </ol>
 
       <p>できましたか？それでは解答例です。</p>
-      <CodeFrame
-        code={`
+      <Accordion showMessage="解答を表示する" hideMessage="解答を隠す">
+        <CodeFrame
+          code={`
           print("魔王が世界を滅ぼそうとしている...")
           print("主人公の名前を入力してください")
           let name = readLine()!
           print("勇者" + name + "は冒険の旅に出た!")
         `}
-      />
+        />
+      </Accordion>
 
       <NextPrev
         prev={{ link: "/part1/chapter1", title: "第一章 環境構築" }}
