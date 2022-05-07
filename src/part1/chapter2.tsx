@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Breadcrumbs } from "../component/breadcrumbs";
 import { CodeFrame } from "../component/code_frame";
 import { LastUpdate } from "../component/last_update";
+import { Message } from "../component/message";
 import { NextPrev } from "../component/next_prev";
 import { useScrollHistory } from "../hooks/use_scroll_history";
 import { useTitle } from "../hooks/use_title";
@@ -297,9 +298,15 @@ export const Chapter2 = () => {
         print("あなたは" + input + "と入力しました。")
       `}
       />
+      <p>print()で出力される画面と同じ画面に入力ができます。</p>
       <p>
         readLine()!とすることでキーボードから入力された一行を読み込むことができます。Lが大文字であることと「!」がつくことに注意してください。
       </p>
+      <Message level="warning">
+        2022/05/07現在、最新版のXcode(ver.
+        13.3.1)では日本語を入力使用するとXcode自体がフリーズするバグがあります。
+        アルファベットで入力するか、入力したい文字をコピペしましょう。
+      </Message>
       <h2>練習問題：ちょっとしたノベルゲーム</h2>
       <p>
         さて、これまでの知識を応用して、ちょっとしたノベルゲームを作ってみましょう！以下の内容のプログラムを作成してください。
