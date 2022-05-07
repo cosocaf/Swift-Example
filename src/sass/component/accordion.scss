@@ -23,20 +23,12 @@
     }
   }
   &[data-show="true"] {
-    & > .toggleButton {
-      &::before {
-      }
-      &::after {
-      }
-    }
     & > .content {
       display: block;
     }
   }
   &[data-show="false"] {
     & > .toggleButton {
-      &::before {
-      }
       &::after {
         transform: rotate(90deg);
       }
