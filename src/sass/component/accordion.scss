@@ -3,6 +3,7 @@
 
   & > .toggleButton {
     position: relative;
+    box-sizing: border-box;
     width: 100%;
     padding: 1rem;
     cursor: pointer;
