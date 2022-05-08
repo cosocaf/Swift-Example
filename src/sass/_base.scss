@@ -50,7 +50,7 @@ p {
 }
 ol,
 ul {
-  margin: 1.4rem 0;
+  margin-bottom: 1.4rem;
 }
 ul {
   padding-left: 1.8em;
@@ -63,7 +63,9 @@ ol {
   padding-left: 1.8em;
   & > li {
     display: list-item;
-    list-style: decimal;
+    &::marker {
+      content: counters(list-item, "-") ". "
+    }
   }
 }
 a {

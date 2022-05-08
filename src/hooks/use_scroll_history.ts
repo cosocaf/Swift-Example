@@ -8,8 +8,8 @@ export const useScrollHistory = () => {
   useLayoutEffect(() => {
     if (!scrollHistory.has(location.hash)) {
       scrollHistory.set(location.hash, {
-        x: window.scrollX,
-        y: window.scrollY,
+        x: 0,
+        y: 0,
       });
     }
 
