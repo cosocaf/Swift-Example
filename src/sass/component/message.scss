@@ -1,19 +1,22 @@
 .message {
   padding: 1rem;
   margin-bottom: 1rem;
+
   &[data-level="info"] {
     background-color: #e1fffe;
-    border-top: 3px solid #0088ff;
-    border-bottom: 3px solid #0088ff;
+    border-top: 3px solid #08f;
+    border-bottom: 3px solid #08f;
   }
+
   &[data-level="warning"] {
     background-color: #ffeebc;
     border-top: 3px solid #ff7300;
     border-bottom: 3px solid #ff7300;
   }
+
   &[data-level="error"] {
     background-color: #ffc9c9;
-    border-top: 3px solid #ff0000;
-    border-bottom: 3px solid #ff0000;
+    border-top: 3px solid #f00;
+    border-bottom: 3px solid #f00;
   }
 }

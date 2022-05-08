@@ -1,23 +1,26 @@
 .codeFrame {
-  margin-bottom: 2rem;
   position: relative;
+  margin-bottom: 2rem;
+
   .copyButton {
     position: absolute;
     top: 0;
     right: 0;
-    background: #ccc;
-    font-size: 12px;
     padding: 0.25em 0.5em;
-    border-bottom-left-radius: 0.25em;
+    font-size: 12px;
     cursor: pointer;
+    background: #ccc;
+    border-bottom-left-radius: 0.25em;
   }
+
   .codeWrapper {
+    padding: 1rem;
     overflow-x: auto;
     background: #1e1e1e;
-    padding: 1rem;
   }
+
   code {
-    color: #d4d4d4;
     font-family: "Courier New", Consolas, monospace;
+    color: #d4d4d4;
   }
 }

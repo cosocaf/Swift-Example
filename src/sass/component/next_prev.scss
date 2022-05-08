@@ -1,22 +1,25 @@
 .nextPrev {
   margin-top: 2.5rem;
+
   a {
-    border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     padding: 14px 40px;
+    border-bottom: 1px solid var(--border-color);
+
     &:hover {
       background-color: var(--hover-main-bg-color);
     }
+
     &:first-child {
       border-top: 1px solid var(--border-color);
     }
 
     .label {
+      display: block;
+      margin-bottom: 10px;
       font-size: 0.825rem;
       color: var(--text-color);
-      margin-bottom: 10px;
-      display: block;
     }
   }
 }
@@ -24,13 +27,16 @@
 @media (min-width: 600px) {
   .nextPrev {
     display: flex;
+
     a {
       flex: 1;
     }
+
     a,
     a:first-child {
       border: none;
     }
+
     .next {
       align-items: flex-end;
     }

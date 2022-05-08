@@ -1,19 +1,23 @@
 .breadcrumbs {
   display: flex;
-  margin: 0;
   padding: 0;
+  margin: 0;
+
   li {
-    list-style: none;
     font-weight: bold;
+    list-style: none;
+
     &::marker {
-      content: ""
+      content: "";
     }
-    &:after {
-      content: ">";
+
+    &::after {
       padding: 0 0.2em;
       color: var(--border-color);
+      content: ">";
     }
-    &:last-child:after {
+
+    &:last-child::after {
       content: "";
     }
   }
