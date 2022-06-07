@@ -13,7 +13,7 @@ export const Chapter6 = () => {
   useScrollHistory();
   return (
     <main>
-      <h1>第六章 配列</h1>
+      <h1>第六章 配列とタプル</h1>
       <Breadcrumbs
         breadcrumbs={[
           { displayName: "ホーム" },
