@@ -41,7 +41,7 @@ export const Overview = () => {
               <Link to="/part1/chapter5">繰り返し</Link>
             </li>
             <li>
-              第六章 <Link to="/part1/chapter6">配列</Link>
+              第六章 <Link to="/part1/chapter6">配列とタプル</Link>
             </li>
             <li>
               第七章
