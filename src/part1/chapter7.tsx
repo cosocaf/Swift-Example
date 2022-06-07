@@ -21,7 +21,7 @@ export const Chapter7 = () => {
       <LastUpdate date="2022/05/07" />
       <p>未定稿です。お待ちください。</p>
       <NextPrev
-        prev={{ link: "/part1/chapter6", title: "第六章 配列" }}
+        prev={{ link: "/part1/chapter6", title: "第六章 配列とタプル" }}
         next={{ link: "/part1/chapter8", title: "第八章 関数" }}
       />
     </main>
