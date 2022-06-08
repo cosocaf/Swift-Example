@@ -21,7 +21,7 @@ export const Chapter6 = () => {
           { file: "chapter6", displayName: "第六章" },
         ]}
       />
-      <LastUpdate date="2022/05/07" />
+      <LastUpdate date="2022/06/08" />
       <p>
         <Link to="/part1/chapter5">前章</Link>
         では繰り返しについて学びました。今回は配列とタプルについて学びます。
