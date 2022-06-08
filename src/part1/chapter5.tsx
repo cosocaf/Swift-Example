@@ -35,6 +35,7 @@ export const Chapter5 = () => {
       <p>今のあなたなら簡単ですよね？一応解答例を示します。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             print(1)
             print(2)
@@ -54,6 +55,7 @@ export const Chapter5 = () => {
       <h2>while文</h2>
       <p>次のプログラムを見てください。</p>
       <CodeFrame
+        lang="swift"
         code={`
           var count = 1
           while count <= 10 {
@@ -63,6 +65,7 @@ export const Chapter5 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1
@@ -104,6 +107,7 @@ export const Chapter5 = () => {
         while文はブロックを実行する「前」に条件分岐しますが、repeat-while文はブロックを実行した「後」に条件分岐します。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var count = 1
           repeat {
@@ -113,6 +117,7 @@ export const Chapter5 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1
@@ -146,6 +151,7 @@ export const Chapter5 = () => {
       </p>
       <p>while文で書くと、以下のようになります。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let password = "abcd"
 
@@ -161,6 +167,7 @@ export const Chapter5 = () => {
       />
       <p>つぎに、repeat-while文です。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let password = "abcd"
 
@@ -178,6 +185,7 @@ export const Chapter5 = () => {
         while文は「前」にrepeat-while文は「後」に条件分岐するのがポイントです。逆に言うと、repeat-while文は最初の一回だけは「無条件」に実行するということになります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var count = 1000000
           repeat {
@@ -187,6 +195,7 @@ export const Chapter5 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1000000
@@ -200,6 +209,7 @@ export const Chapter5 = () => {
         1から10を順番に表示するプログラムを考えます。while文でももちろんかけますが、for文を使うほうがすっきりします。まずは、以下の例を見てみましょう。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
         for count in 1...10 {
           print(count)
@@ -207,6 +217,7 @@ export const Chapter5 = () => {
       `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1
@@ -223,6 +234,7 @@ export const Chapter5 = () => {
       />
       <p>for文の書式は、以下の通りです。</p>
       <CodeFrame
+        lang="swift"
         code={`
           for 変数 in 範囲 {
             ブロック
@@ -265,6 +277,7 @@ export const Chapter5 = () => {
       <p>それでは解答例です。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             for i in 1...9 {
               for j in 1...9 {
@@ -285,6 +298,7 @@ export const Chapter5 = () => {
       <h3>break文</h3>
       <p>繰り返し文を強制的に終了します。次のプログラムを見てください。</p>
       <CodeFrame
+        lang="swift"
         code={`
           for i in 1...10 {
             print(i)
@@ -295,6 +309,7 @@ export const Chapter5 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1
@@ -312,6 +327,7 @@ export const Chapter5 = () => {
         繰り返し文を強制的に次のループに移行させます。次のプログラムを見てください。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           for i in 1...10 {
             if i % 2 == 0 {
@@ -322,6 +338,7 @@ export const Chapter5 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           1
@@ -387,6 +404,7 @@ export const Chapter5 = () => {
       <p>それでは解答例です。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             var level = 1
             print("勇者のレベルは" + String(level) + "だ。")

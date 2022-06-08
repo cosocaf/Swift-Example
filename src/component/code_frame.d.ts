@@ -1,5 +1,6 @@
 declare type CodeFrameProps = {
     code: string;
+    lang: "text" | "swift";
 };
-export declare const CodeFrame: ({ code }: CodeFrameProps) => JSX.Element;
+export declare const CodeFrame: ({ code, lang }: CodeFrameProps) => JSX.Element;
 export {};

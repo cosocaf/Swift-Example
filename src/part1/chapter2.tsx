@@ -28,9 +28,10 @@ export const Chapter2 = () => {
         World!」と表示されるプログラムを実行してみました。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
-        print("Hello, World!")
-      `}
+          print("Hello, World!")
+        `}
       />
       <h2>画面に好きな文字を表示させよう</h2>
       <p>
@@ -38,11 +39,13 @@ export const Chapter2 = () => {
         World!&quot;書き換えてみてください。日本語でも構いません。書き換えたら⌘+Rで実行できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print("吾輩は猫である。")
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           実行結果：
           吾輩は猫である。
@@ -52,6 +55,7 @@ export const Chapter2 = () => {
         もしプログラムに誤りがあれば、エラーとなり実行できません。よくある誤りとして以下のように書いてしまうことがあります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print(Hello)
         `}
@@ -61,6 +65,7 @@ export const Chapter2 = () => {
         Helloの周りをよく見ると、&quot;(ダブルクォート)がありません。以下のように修正すれば正しく実行できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print("Hello")
         `}
@@ -68,6 +73,7 @@ export const Chapter2 = () => {
       <h2>複数行の文章を表示しよう</h2>
       <p>二行以上の文章を表示することもできます。以下のように書くだけです。</p>
       <CodeFrame
+        lang="swift"
         code={`
           print("吾輩は猫である。")
           print("名前はまだない。")
@@ -75,6 +81,7 @@ export const Chapter2 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           実行結果：
           吾輩は猫である。
@@ -88,11 +95,13 @@ export const Chapter2 = () => {
         今までは文字列を表示していただけでしたが、今度は数字を表示してみましょう。文字列と違い、数字は&quot;で囲いません。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print(123)
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           実行結果：
           123
@@ -103,11 +112,13 @@ export const Chapter2 = () => {
         数字同士は+や-などの「演算子」と組み合わせて計算することができます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print(2 + 3)
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           実行結果：
           5
@@ -127,11 +138,13 @@ export const Chapter2 = () => {
       <h2>文字列を+演算子でくっつけよう</h2>
       <p>+演算子は加算だけではなく文字列同士をくっつけることもできます。</p>
       <CodeFrame
+        lang="swift"
         code={`
           print("春は" + "あけぼの")
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           実行結果：
           春はあけぼの
@@ -146,6 +159,7 @@ export const Chapter2 = () => {
       {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
       <p>//と入力することで、そこから行末までがコメントになります。</p>
       <CodeFrame
+        lang="swift"
         code={`
           print("hello") // helloと出力します。
           // print("world") 先頭に//を書いているため、worldは出力されません。
@@ -155,6 +169,7 @@ export const Chapter2 = () => {
       {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
       <p>/*と*/がペアになり、その間のすべてが行を超えてコメントになります。</p>
       <CodeFrame
+        lang="swift"
         code={`
           /*
             これはブロックコメントです。
@@ -183,6 +198,7 @@ export const Chapter2 = () => {
       </p>
       <p>実際にコードを書いてみましょう。</p>
       <CodeFrame
+        lang="swift"
         code={`
           print(150 * 4 + 320 * 3 + 400 * 10 + 560 * 8)
         `}
@@ -192,6 +208,7 @@ export const Chapter2 = () => {
         その場合の合計金額はいくらでしょうか。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print(150 * 4 + 220 * 3 + 400 * 15 + 560 * 8)
         `}
@@ -206,6 +223,7 @@ export const Chapter2 = () => {
         50と記述することで、変数Aを定義し、その変数に50を代入する。という意味になります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let A = 150 * 4
           let B = 320 * 3
@@ -230,6 +248,7 @@ export const Chapter2 = () => {
         今までの例では変数の名前を基本的に一文字にしていました。しかし、実際は任意の名前を付けることができます。ただし、半角英数字、アンダーバー、ドルマークのみ使用可能です。厳密にはひらがな、漢字なども使えないこともないのですが、推奨されないのでやめましょう。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let name = "Tom"
           let age = 23
@@ -243,6 +262,7 @@ export const Chapter2 = () => {
         例えば、次のコードはエラーとなり実行できません。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
         let name = "Tom"
         print(Name)
@@ -263,6 +283,7 @@ export const Chapter2 = () => {
         </li>
       </ul>
       <CodeFrame
+        lang="swift"
         code={`
         let name = "Tom"                      // OK
         let mailAddress = "xxx@xxx.xxx"       // OK
@@ -277,6 +298,7 @@ export const Chapter2 = () => {
         Swiftでは、文字列を意味する&quot;hello&quot;や数字を意味する100とおなじように変数を使用できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let first = "春は"
           let second = "あけぼの"
@@ -284,6 +306,7 @@ export const Chapter2 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           春はあけぼの
@@ -294,6 +317,7 @@ export const Chapter2 = () => {
         print()を使うことで画面に文字列を出力できましたが、逆に画面から文字列を入力するにはどうしたらよいでしょうか。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
         let input = readLine()!
         print("あなたは" + input + "と入力しました。")
@@ -337,12 +361,13 @@ export const Chapter2 = () => {
       <p>できましたか？それでは解答例です。</p>
       <Accordion showMessage="解答を表示する" hideMessage="解答を隠す">
         <CodeFrame
+          lang="swift"
           code={`
-          print("魔王が世界を滅ぼそうとしている...")
-          print("主人公の名前を入力してください")
-          let name = readLine()!
-          print("勇者" + name + "は冒険の旅に出た!")
-        `}
+            print("魔王が世界を滅ぼそうとしている...")
+            print("主人公の名前を入力してください")
+            let name = readLine()!
+            print("勇者" + name + "は冒険の旅に出た!")
+          `}
         />
       </Accordion>
 

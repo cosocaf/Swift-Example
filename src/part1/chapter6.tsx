@@ -34,6 +34,7 @@ export const Chapter6 = () => {
       <p>では実際にコードを書いてみましょう。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             let A = Int.random(in: 0...100)
             let B = Int.random(in: 0...100)
@@ -74,6 +75,7 @@ export const Chapter6 = () => {
       </p>
       <p>配列は、次のように使います。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let intArray: [Int] = [10, 20, 30]
           print(intArray[0])
@@ -86,6 +88,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           10
@@ -104,6 +107,7 @@ export const Chapter6 = () => {
         要素数が0や1の配列を作ることも可能です。単に以下のように記述すればよいです。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let zeroElemArray: [Int] = []
           let anotherZeroElemArray = [Int]()
@@ -118,12 +122,14 @@ export const Chapter6 = () => {
         要素数が決まっており、要素が全て同じ値であってよい場合は、次のように書くことができます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let fillElemArray = [Int](repeating: 10, count: 3)
           print(fillElemArray)
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           [10, 10, 10]
@@ -148,6 +154,7 @@ export const Chapter6 = () => {
       <p>いきなりだと難しいかもしれません。以下、解答例です。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             print("神社にやってきました。おみくじを引きます。")
             let lottery = ["大吉", "中吉", "吉", "小吉", "末吉", "凶", "大凶"]
@@ -168,6 +175,7 @@ export const Chapter6 = () => {
         通常の変数と同様に、要素に対して=をすることで、要素の書き換えができます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana"]
           fruits[0] = "orange"
@@ -176,6 +184,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["orange", "grape"]
@@ -186,6 +195,7 @@ export const Chapter6 = () => {
         配列.append(追加する要素)とすることで、配列の末尾に要素を追加できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana"]
           fruits.append("orange")
@@ -194,6 +204,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["apple", "banana", "orange", "grape"]
@@ -205,6 +216,7 @@ export const Chapter6 = () => {
         追加位置)とすることで、指定位置に要素を挿入できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana"]
           fruits.insert("orange", at: 1)
@@ -212,6 +224,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["apple", "orange", "banana"]
@@ -222,6 +235,7 @@ export const Chapter6 = () => {
         配列.remove(at: 追加位置)とすることで、指定位置の要素を削除できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana", "orange"]
           fruits.remove(at: 1)
@@ -229,6 +243,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["apple", "orange"]
@@ -240,6 +255,7 @@ export const Chapter6 = () => {
         Stringなら辞書順、Intなら大小順です。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["orange", "banana", "grape", "apple"]
           fruits.sort()
@@ -247,6 +263,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["apple", "banana", "grape", "orange"]
@@ -255,6 +272,7 @@ export const Chapter6 = () => {
       <h3>逆順</h3>
       <p>配列.reverse()とすることで、配列の並びを逆にします。</p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana", "grape", "orange"]
           fruits.reverse()
@@ -262,6 +280,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ["orange", "grape", "banana", "apple"]
@@ -273,6 +292,7 @@ export const Chapter6 = () => {
         学んだfor文について、inの後に配列を置くことで、その配列を順番に処理することができます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var fruits = ["apple", "banana", "grape", "orange"]
           for fruit in fruits {
@@ -281,6 +301,7 @@ export const Chapter6 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           apple
@@ -307,6 +328,7 @@ export const Chapter6 = () => {
       <p>それでは解答例です。</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             var scores: [Int] = []
 

@@ -38,6 +38,7 @@ export const Chapter4 = () => {
       <h2>if文</h2>
       <p>次のプログラムを見てください。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let isSunny = true
           if isSunny {
@@ -49,6 +50,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ピクニックへ行く
@@ -84,6 +86,7 @@ export const Chapter4 = () => {
         ブロックの中で宣言した変数は、そのブロックの中でしか使用できません。例えば、次のコードはエラーになります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let isSunny = true
           if isSunny {
@@ -100,19 +103,21 @@ export const Chapter4 = () => {
       </p>
       <Accordion showMessage="例を表示する" hideMessage="例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
-          let isSunny = true
-          let action: String
-          if isSunny {
-            action = "ピクニック"
-          }
-          else {
-            action = "ゲーム"
-          }
-          print(action)
-        `}
+            let isSunny = true
+            let action: String
+            if isSunny {
+              action = "ピクニック"
+            }
+            else {
+              action = "ゲーム"
+            }
+            print(action)
+          `}
         />
         <CodeFrame
+          lang="text"
           code={`
           出力結果：
           ピクニック
@@ -132,6 +137,7 @@ export const Chapter4 = () => {
         を思い出してください。評価の結果Bool型になる演算子があったはずです。そう、「比較演算子」です。比較演算が使えれば、次のようなことを記述できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let weather = "sunny"
           // もし天気が晴れだったら...
@@ -145,6 +151,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="swift"
         code={`
           let money = 200
           // もし120円以上持っていたら...
@@ -165,6 +172,7 @@ export const Chapter4 = () => {
         実は文字列も&lt;演算子や&gt;演算子などによる「大小の比較」ができます。ただし、文字列の比較の場合「辞書順」による大小の比較になります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let money = "90円"
           if money >= "120円" {
@@ -176,6 +184,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           ジュースが買える
@@ -189,6 +198,7 @@ export const Chapter4 = () => {
         例えば、「年齢が20歳以上」かつ「住所が東京」のような条件を考えます。今までの書き方ならば次のようになります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let age = 24
           let address = "Tokyo"
@@ -207,6 +217,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           OK
@@ -226,6 +237,7 @@ export const Chapter4 = () => {
       </p>
       <p>では実際に論理演算子を使った例を見てみましょう。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let age = 24
           let address = "Tokyo"
@@ -238,6 +250,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           OK
@@ -251,6 +264,7 @@ export const Chapter4 = () => {
         そんな時に使えるのが!演算子です。!演算子は否定形の条件に使用できます。!演算子は優先順位が高いので、否定する条件を()でくくります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let age = 24
           // もしageが20以上で「ない」なら...
@@ -264,6 +278,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           NG
@@ -272,6 +287,7 @@ export const Chapter4 = () => {
       <h2>引っ掛かりやすいポイント</h2>
       <p>よくある間違えとして、次のように書いてしまうことがあります。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let age = 14
           // ageが13から15の中であれば...
@@ -292,6 +308,7 @@ export const Chapter4 = () => {
       </p>
       <p>では、どのように記述すれば正しく実行できるかわかりますか？</p>
       <CodeFrame
+        lang="swift"
         code={`
           let age = 14
           if 13 <= age && age <= 15 {
@@ -303,6 +320,7 @@ export const Chapter4 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           中学生です。
@@ -313,6 +331,7 @@ export const Chapter4 = () => {
         晴れなら「ピクニックに行く」曇りなら「散歩をする」雨なら「ゲームをする」のように、三つに分岐することを考えます。今までの書き方ならば次のようになります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let weather = "sunny"
           if weather == "sunny" {
@@ -333,6 +352,7 @@ export const Chapter4 = () => {
         Swiftではelseの直後にブロックを記述せず、if文を再び記述できます。これを「else-if構文」ということもあります。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let weather = "sunny"
           if weather == "sunny" {
@@ -351,6 +371,7 @@ export const Chapter4 = () => {
         特定条件の時だけ何かを実行し、そうでないときには何もしないような場合、elseを省略できます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let weather = "sunny"
           if weather == "sunny" {
@@ -376,6 +397,7 @@ export const Chapter4 = () => {
       <p>できましたか？それでは解答例です</p>
       <Accordion showMessage="解答例を表示する" hideMessage="解答例を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             print("神社にやってきました。おみくじを引きます。")
             let fortune = Int.random(in: 1...7)
@@ -416,6 +438,7 @@ export const Chapter4 = () => {
         では、switch文の構文を確認しましょう。先ほどの練習問題を書き換えてみます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           print("神社にやってきました。おみくじを引きます。")
           let fortune = Int.random(in: 1...7)
@@ -488,6 +511,7 @@ export const Chapter4 = () => {
       <p>できましたか？それでは解答例です。</p>
       <Accordion showMessage="解答を表示する" hideMessage="解答を隠す">
         <CodeFrame
+          lang="swift"
           code={`
             var level = 1
             print("勇者のレベルは" + String(level) + "だ。")

@@ -30,6 +30,7 @@ export const Chapter3 = () => {
       <h2>データ型</h2>
       <p>式を構成する最小単位を「値」といいます。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let userId = 100
           let message = "hello"
@@ -92,6 +93,7 @@ export const Chapter3 = () => {
         100や&quot;hello&quot;のように、ソースコード中に直接書かれた値を「リテラル」といいます。100はInt型、&quot;hello&quot;はString型のリテラルです。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let userId = 100      // 変数userIdにInt型のリテラル「100」を代入
           let message = "hello" // 変数messageにString型のリテラル「"hello"」を代入
@@ -104,6 +106,7 @@ export const Chapter3 = () => {
         基本的には代入したリテラルの型と同様の型が自動的に割り振られます。ただし、ソースコード上に明示することもできます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let userId: Int = 100
         `}
@@ -112,6 +115,7 @@ export const Chapter3 = () => {
         このように、変数名の直後に:(コロン)と型を記述することで、その変数の型を明示することができます。大抵の場合は自動で割り当てられるもので十分ですが、可読性やバグの防止のために明示できるなら明示しておきましょう。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let userId: Int = "hello" // エラー: Int型の変数にString型の変数は代入できない
         `}
@@ -119,6 +123,7 @@ export const Chapter3 = () => {
       <h2>変数の宣言と代入の分離</h2>
       <p>Swiftでは、変数の宣言と代入を分離することができます。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let message: String
           message = "hello"
@@ -128,6 +133,7 @@ export const Chapter3 = () => {
         このように一行目で=の先を書かずに別の行で代入できます。特に一行目を「変数の宣言」二行目を「変数の代入」といいます。変数の宣言と代入を分離する場合、宣言には必ず型を明示しなければなりません。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let message       // エラー
           message = "hello"
@@ -136,6 +142,7 @@ export const Chapter3 = () => {
       <h2>変数の再代入</h2>
       <p>ときどき、一度代入した変数に別の値を代入したくなる時があります。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let message: String
 
@@ -151,6 +158,7 @@ export const Chapter3 = () => {
         Swiftでは、letではなく「var」で宣言した変数は何度でも代入ができます。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           var message: String
 
@@ -162,6 +170,7 @@ export const Chapter3 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           hello
@@ -173,6 +182,7 @@ export const Chapter3 = () => {
       </p>
       <p>しかし、大抵の変数は再代入されては困ります。</p>
       <CodeFrame
+        lang="swift"
         code={`
         var userName = "Tom"
         print("あなたの名前は" + userName + "です。")
@@ -187,6 +197,7 @@ export const Chapter3 = () => {
       `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           あなたの名前はTomです。
@@ -198,6 +209,7 @@ export const Chapter3 = () => {
         このようなバグを未然に防ぐためにも、基本的にはletを使いましょう!
       </p>
       <CodeFrame
+        lang="swift"
         code={`
         let userName = "Tom" // varからletに修正
         print("あなたの名前は" + userName + "です。")
@@ -342,6 +354,7 @@ export const Chapter3 = () => {
       <h2>型の変換</h2>
       <p>以下のコードを書いてみてください。</p>
       <CodeFrame
+        lang="swift"
         code={`
           let name = "勇者"
           let level = 20
@@ -356,6 +369,7 @@ export const Chapter3 = () => {
       <p>しかし、Swiftは型を「変換」することができます。</p>
       <h3>Int → String</h3>
       <CodeFrame
+        lang="swift"
         code={`
           let int = 100
           let str = String(int)
@@ -363,6 +377,7 @@ export const Chapter3 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           str is 100
@@ -373,6 +388,7 @@ export const Chapter3 = () => {
       </p>
       <h3>String → Int</h3>
       <CodeFrame
+        lang="swift"
         code={`
           let str = "100"
           let int = Int(str)!
@@ -380,6 +396,7 @@ export const Chapter3 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           120
@@ -393,6 +410,7 @@ export const Chapter3 = () => {
         では、先ほどのコードを修正しましょう。下のコードを見ずに自分で書いてから先に進むようにしてください。
       </p>
       <CodeFrame
+        lang="swift"
         code={`
           let name = "勇者"
           let level = 20
@@ -400,6 +418,7 @@ export const Chapter3 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           勇者のレベルは20です。
@@ -416,6 +435,7 @@ export const Chapter3 = () => {
       </p>
       <h3>乱数生成</h3>
       <CodeFrame
+        lang="swift"
         code={`
           // 1から10の範囲でランダムな整数を生成
           let randomInt = Int.random(in: 1...10)
@@ -426,6 +446,7 @@ export const Chapter3 = () => {
       </p>
       <h3>二つのうち大きいほう/小さいほうを取得</h3>
       <CodeFrame
+        lang="swift"
         code={`
           let x = 10
           let y = 20
@@ -436,6 +457,7 @@ export const Chapter3 = () => {
         `}
       />
       <CodeFrame
+        lang="text"
         code={`
           出力結果：
           10
@@ -475,15 +497,16 @@ export const Chapter3 = () => {
       <p>できましたか？それでは解答例です。</p>
       <Accordion showMessage="解答を表示する" hideMessage="解答を隠す">
         <CodeFrame
+          lang="swift"
           code={`
-          var level = 1
-          print("勇者のレベルは" + String(level) + "だ。")
-          print("勇者は特訓を始めた！")
-          let exp = Int.random(in: 1...100)
-          print(String(exp) + "ポイントの経験値を獲得！")
-          level += exp
-          print("特訓の結果、" + String(level) + "レベルに成長した！")
-        `}
+            var level = 1
+            print("勇者のレベルは" + String(level) + "だ。")
+            print("勇者は特訓を始めた！")
+            let exp = Int.random(in: 1...100)
+            print(String(exp) + "ポイントの経験値を獲得！")
+            level += exp
+            print("特訓の結果、" + String(level) + "レベルに成長した！")
+          `}
         />
       </Accordion>
       <p>どうでしょうか？次章の練習問題ではいよいよ魔王に挑んでみます。</p>

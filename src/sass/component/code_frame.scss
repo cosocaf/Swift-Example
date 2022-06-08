@@ -23,4 +23,44 @@
     font-family: "Courier New", Consolas, monospace;
     color: #d4d4d4;
   }
+
+  [data-role="keyword"] {
+    color: #c586c0;
+  }
+
+  [data-role="storage"] {
+    color: #569cd6;
+  }
+
+  [data-role="operator"] {
+    color: #d4d4d4;
+  }
+
+  [data-role="type"] {
+    color: #4ec9b0;
+  }
+
+  [data-role="numeric"] {
+    color: #b5cea8;
+  }
+
+  [data-role="string"] {
+    color: #ce9178;
+  }
+
+  [data-role="variable"] {
+    color: #9cdcfe;
+  }
+
+  [data-role="constant"] {
+    color: #4fc1ff;
+  }
+
+  [data-role="function"] {
+    color: #dcdcaa;
+  }
+
+  span[data-role="comment"] {
+    color: #6a9955;
+  }
 }
